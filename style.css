@@ -118,7 +118,7 @@ body.sidebar-active {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     z-index: 2000;
-    padding: 20px;
+    padding: 24px;
     box-sizing: border-box;
   }
 
@@ -184,7 +184,7 @@ body.sidebar-active {
   .mobile-cta {
     display: block;
     margin-top: auto;
-    padding: 20px 0;
+    padding: 24px 0;
   }
 
   .mobile-cta .cta-button {
@@ -483,7 +483,7 @@ body.sidebar-active {
   display: inline-block;
   background-color: #fd92a4;
   color: #000000;
-  padding: 8px 20px;
+  padding: 8px 24px;
   border-radius: 5px;
   font-size: 14px;
   font-weight: 600;
