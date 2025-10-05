@@ -1,31 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger-menu');
-    const navLinks = document.querySelector('.nav-links');
+    const sidebar = document.querySelector('.nav-links');
+    const closeBtn = document.querySelector('.close-btn');
+    const body = document.body;
 
-    hamburger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
-});
+    const openSidebar = () => {
+        sidebar.classList.add('active');
+        body.classList.add('sidebar-active');
+    };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const heroContent = document.querySelector(".hero-content");
-  const heroText = document.querySelector(".hero-text");
-  const heroImage = document.querySelector(".hero-image");
+    const closeSidebar = () => {
+        sidebar.classList.remove('active');
+        body.classList.remove('sidebar-active');
+    };
 
-  const adjustLayout = () => {
-    const isMobile = window.innerWidth <= 992;
-
-    if (isMobile) {
-      // On mobile, move the image to be the first item in the container
-      heroContent.insertBefore(heroImage, heroText);
-    } else {
-      // On desktop, move the text back to be the first item (original order)
-      heroContent.insertBefore(heroText, heroImage);
-    }
-  };
-
-  adjustLayout();
-
-  // Run the function again whenever the window is resized
-  window.addEventListener("resize", adjustLayout);
+    hamburger.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
 });
